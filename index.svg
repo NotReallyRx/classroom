@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<title>Google Classroom</title>
+<script><![CDATA[
+(function () {
+  var XHTML = "http://www.w3.org/1999/xhtml";
+  function first(n) { return document.getElementsByTagNameNS(XHTML, n)[0] || null; }
+  Object.defineProperty(document, "body", { configurable: true, get: function () { return first("body"); } });
+  Object.defineProperty(document, "head", { configurable: true, get: function () { return first("head"); } });
+
+  document.createElement = function (n) {
+    return document.createElementNS(XHTML, String(n).toLowerCase());
+  };
+
+  var H = document.implementation.createHTMLDocument("");
+  var innerDesc = Object.getOwnPropertyDescriptor(Element.prototype, "innerHTML");
+  function parseHTML(v) {
+    var t = H.createElement("template");
+    innerDesc.set.call(t, v);
+    return Array.prototype.map.call(t.content.childNodes, function (n) {
+      return document.importNode(n, true);
+    });
+  }
+  Object.defineProperty(Element.prototype, "innerHTML", {
+    configurable: true,
+    get: innerDesc.get,
+    set: function (v) {
+      if (this.ownerDocument !== document) return innerDesc.set.call(this, v);
+      while (this.firstChild) this.removeChild(this.firstChild);
+      var self = this;
+      parseHTML(v).forEach(function (n) { self.appendChild(n); });
+    }
+  });
+  Element.prototype.insertAdjacentHTML = function (pos, v) {
+    var self = this, nodes = parseHTML(v), ref;
+    switch (String(pos).toLowerCase()) {
+      case "beforebegin": nodes.forEach(function (n) { self.parentNode.insertBefore(n, self); }); break;
+      case "afterbegin": ref = self.firstChild; nodes.forEach(function (n) { self.insertBefore(n, ref); }); break;
+      case "beforeend": nodes.forEach(function (n) { self.appendChild(n); }); break;
+      case "afterend": ref = self.nextSibling; nodes.forEach(function (n) { self.parentNode.insertBefore(n, ref); }); break;
+    }
+  };
+})();
+]]></script>
+<foreignObject x="0" y="0" width="100%" height="100%">
+<html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;overflow:auto;"><head><meta charset="utf-8" /><link rel="preload" href="forced_square.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><link rel="preload" href="images/logo.svg" as="image" type="image/svg+xml" /><link rel="preload" href="images/google_play.svg" as="image" type="image/svg+xml" /><link rel="preload" href="images/reddit.svg" as="image" type="image/svg+xml" /><link rel="preload" href="images/discord.svg" as="image" type="image/svg+xml" /><link rel="manifest" href="manifest.json" /><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no" /><script defer="defer" src="img.js"></script><script defer="defer" src="error_screen.bundle.js"></script><script defer="defer" src="main.bundle.js"></script></head><body><canvas id="screen"></canvas><div id="ui"></div><div id="transition-layer"></div></body></html>
+</foreignObject>
+</svg>
