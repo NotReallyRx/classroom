@@ -73139,7 +73139,7 @@
         }
         getLeaderboard(e, t, n, i, r) {
           let a =
-            "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+            "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
             (0, R.gn)(this, Af, "f") +
             "leaderboard&version=0.6.3&trackId=" +
             t +
@@ -73350,7 +73350,7 @@
         }
           getLeaderboardUserEntry(e, t, n) {
             const i =
-              "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+              "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
               (0, R.gn)(this, Af, "f") +
               "leaderboardUserEntry&version=0.6.3&trackId=" +
               t +
@@ -73404,7 +73404,7 @@
         }
         getRecordings(e) {
           const t =
-            "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+            "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
             (0, R.gn)(this, Af, "f") +
             "recordings&version=0.6.3&ids=" +
             e.join(",");
@@ -73518,7 +73518,7 @@
                 c(new Error("Recording is too large"));
               else {
                 const o =
-                  "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+                  "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
                   (0, R.gn)(this, Af, "f") +
                   "leaderboard";
                 let d =
@@ -73644,7 +73644,7 @@
         submitUserProfile(e, t, n, i) {
           return new Promise((r, a) => {
             const s =
-                "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" + (0, R.gn)(this, Af, "f") + "user",
+                "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" + (0, R.gn)(this, Af, "f") + "user",
               o =
                 "version=0.6.3&userToken=" +
                 encodeURIComponent(e) +
@@ -73676,7 +73676,7 @@
               s(new Error("Submit not allowed"));
             else {
               const o =
-                  "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+                  "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
                   (0, R.gn)(this, Af, "f") +
                   "verifyRecordings",
                 l =
@@ -73809,7 +73809,7 @@
         getUser(e) {
           return new Promise((t, n) => {
             const i =
-                "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+                "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
                 (0, R.gn)(this, Af, "f") +
                 "user?version=0.6.3&userToken=" +
                 encodeURIComponent(e),
@@ -73971,7 +73971,7 @@
         }
         async getTrackOfTheWeek() {
           const e =
-            "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+            "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
             (0, R.gn)(this, Af, "f") +
             "trackOfTheWeek?version=0.6.3";
           return new Promise((t, n) => {
@@ -74108,7 +74108,7 @@
         }
         async getAdminTrackOfTheWeekList(e) {
           const t =
-              "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+              "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
               (0, R.gn)(this, Af, "f") +
               "admin/trackOfTheWeekList?version=0.6.3&userToken=" +
               encodeURIComponent(e),
@@ -74157,7 +74157,7 @@
         }
         async setAdminTrackOfTheWeek(e, t, n, i, r, a, s, o, l, c) {
           const h =
-              "https://script.google.com/macros/s/AKfycbztNULlthaiKlHLFkDBo6aAiRVbnLwtY2aRoDvKKzw24Z-OzOVSKQ3TH74NQ0b3BKUTGA/exec?path=/" +
+              "https://script.google.com/macros/s/AKfycbylB18MHSY_dXRwg-nO9e3VBQxXPo1jUMv-BhpDQa2vwBQL82BKZGXUtj54a-A_pCLL/exec?path=/" +
               (0, R.gn)(this, Af, "f") +
               "admin/trackOfTheWeek",
             d =
